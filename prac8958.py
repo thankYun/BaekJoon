@@ -38,7 +38,7 @@ def sumNum(n):
         return 0
     else:
         return n + sumNum(n-1)
-
+n+=1
 OXT = int(input())
 
 for i in range(OXT):

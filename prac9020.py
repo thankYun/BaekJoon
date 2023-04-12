@@ -20,6 +20,7 @@ for i in range(2, 101):
     for j in range(start, 10001, i):
         if j != i:
             is_prime[j-4] = False
+
 K=[]
 for i in range(4, 10001):
     if is_prime[i-4]:
