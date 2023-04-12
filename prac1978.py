@@ -20,8 +20,8 @@ for i in range(len(Chart)):
         pass
     else:     
         for j in range(Chart[i]-2):        
-            if Chart[i]%(j+2)==0:
-                passs+=1
-        if passs==0:
-            a+=1
+            if Chart[i]%(j+2)==0:                ###j 2부터 차트 까지 나눔 [[[[차트 1번을 /2, 3, 4, 5, 6...으로 나눔]]]]
+                passs+=1                                                    #[[[차트 1번에 2,3,4,5,6 등으로 나눴을 때 나머지가 0일때마다 패스에 1 추가]]]
+        if passs==0:                                                        #[[[패스가 0이면 약수 없다는 뜻이니까 소수]]]
+            a+=1                                                            #소수 개수 출력
 print (a)

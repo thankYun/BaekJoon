@@ -16,6 +16,6 @@
 
 #로 풀었으나
 #더 쉬운 방식이 있을 것 같아 list 형식으로 다시 제작하였다.
-insertNum=int(input())
+insertNum=str(input())
 for i in range (1,10):
     print(insertNum,'*',i,'=',insertNum*i)

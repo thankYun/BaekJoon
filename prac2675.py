@@ -15,36 +15,36 @@
 # R(정수), S(문자열) 가 들어갈 것이다 어떻게 하면 정수와 R을 모두 받을 수 있을까
 #문자열로 받아서 R을 정수로 변형하겠다
 
-T=int(input())
-for i in range(T):
-    R_1,S=map(input().split())
-    R=int(R_1)
+# T=int(input())
+# for i in range(T):
+#     R_1,S=map(input().split())
+#     R=int(R_1)
 
 
 
-##TEST
-    # S='rlaehddbs'
-    # R=3
+# ##TEST
+#     # S='rlaehddbs'
+#     # R=3
 
-#S에 입력된 문자열을 각 텍스트로 어떻게 분리할 수 있을지를 생각해야 한다.
-#검색 결과 String(start:end:step)함수를 찾았다. 사실 쓰고 보니 입학시험에서 공부했던 내용인 것 같은데 알콜성 청년치매는 그런 거 모른다.
-#추가는 노션에 기입
-# 방식이 특이한 것 같은데 추가로 공부가 필요하다. string.S 식일 줄 알았는데 string=S로 바로 S가 분리되어버린 것 같다.
-    K=[]
-# print(S*R)을 하면 123123123식으로 늘어진다.
-    for i in range(len(S)):
-    # print(S[i]*R)
-    #를 하면 
-    # 111 
-    # 222
-    # 333 식으로 분리되니 합쳐버리자.
-        outPut=S[i]*R
-        K.append(outPut)
-# # string=K
-# print(K)
-#이제 리스트를 문자열로 합치자.
-    join_K=''.join(K)
-    print(join_K)
+# #S에 입력된 문자열을 각 텍스트로 어떻게 분리할 수 있을지를 생각해야 한다.
+# #검색 결과 String(start:end:step)함수를 찾았다. 사실 쓰고 보니 입학시험에서 공부했던 내용인 것 같은데 알콜성 청년치매는 그런 거 모른다.
+# #추가는 노션에 기입
+# # 방식이 특이한 것 같은데 추가로 공부가 필요하다. string.S 식일 줄 알았는데 string=S로 바로 S가 분리되어버린 것 같다.
+#     K=[]
+# # print(S*R)을 하면 123123123식으로 늘어진다.
+#     for i in range(len(S)):
+#     # print(S[i]*R)
+#     #를 하면 
+#     # 111 
+#     # 222
+#     # 333 식으로 분리되니 합쳐버리자.
+#         outPut=S[i]*R
+#         K.append(outPut)
+# # # string=K
+# # print(K)
+# #이제 리스트를 문자열로 합치자.
+#     join_K=''.join(K)
+#     print(join_K)
 
 
 
@@ -54,8 +54,8 @@ for i in range(T):
     R_1,S=input().split()
     R=int(R_1)
     K=[]
-    for i in range(len(S)):
-        outPut=S[i]*R
+    for j in range(len(S)):
+        outPut=S[j]*R
         K.append(outPut)
     join_K=''.join(K)
     print(join_K)

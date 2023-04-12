@@ -17,11 +17,10 @@
 
 C=int(input())
 for i in range(C):
-    Score=int(input().split())
+    Score=list(map(int,input().split()))
     SC=[]
     SC.extend(Score)
     SC.remove(SC[0])
-    print(SC)
     if Score[0]==0:
         print("error")
     else:
@@ -31,5 +30,5 @@ for i in range(C):
         if SC[j]>average:
             Count+=1
     percent=Count*100/Score[0]
-    print(round(percent,3),'%')
+    print(f'{percent:.3f}%')
     
