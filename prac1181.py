@@ -1,18 +1,14 @@
 import sys
 
 N=int(sys.stdin.readline())
-List=[]
+List=[0 for _ in range(N)]
 for i in range(N):
-    Z=input()
-    if Z in List:
-        pass
-    else:
-        for j in range (len(List)):
-            if len(List[j])>len(Z)>len(List[j-1]):
-                List.insert(j,Z)
+    List[i]=sys.stdin.readline().rstrip()
 
-    
+set_List=set(List)
+ListA=list(set_List)
+ListA.sort()
+ListA.sort(key=len)
 
-
-# for i in range(len(List)):
-#     print(List[i])
+for i in range(len(ListA)):
+    print(ListA[i])
