@@ -1,0 +1,40 @@
+import sys
+
+N=int(sys.stdin.readline())
+li=[0 for _ in range(N)]
+count=1
+
+# 한 번 계산한 값을 저장하기 위한 딕셔너리
+address_dict = {}
+
+for i in range(N):
+    li[i]=list(map(int,sys.stdin.readline().split()))
+    x, r = li[i]
+    # 이미 계산한 값이 있다면 해당 값을 가져와서 사용
+    if x-r in address_dict:
+        start = address_dict[x-r]
+    else:
+        start = x-r
+    if x+r in address_dict:
+        end = address_dict[x+r]
+    else:
+        end = x+r
+    address_dict[x-r] = start
+    address_dict[x+r] = end
+
+via = [start, end]
+
+for i in range(1, N):
+    x, r = li[i]
+    start = address_dict[x-r]
+    end = address_dict[x+r]
+    # 이미 via 리스트에 있는 값이라면 추가하지 않음
+    if [start, end] not in via:
+        via.append([start, end])
+
+# 결과 출력
+for a, b in address_dict.items():
+    if [a, b] in via:
+        count += 1
+
+print(count)
